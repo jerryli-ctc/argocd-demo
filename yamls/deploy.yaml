@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline-deploy-228
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: pipeline-app-228
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pipeline-app-228
+    spec:
+      containers:
+      - name: pipelines-javascript-k8s
+        image: ezlee/pipelines-javascript-k8s:228
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pipeline-service
+spec:
+  selector:
+    app: pipeline-app-228
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: LoadBalancer
