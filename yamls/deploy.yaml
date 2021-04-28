@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: pipeline-app-228
-  replicas:3 
+  replicas: 23 
   template:
     metadata:
       labels:
@@ -50,4 +50,4 @@ spec:
           service: 
             name: pipeline-service 
             port: 
-              number: 80 
+              number: 8080 
