@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: pipeline-app-228
-  replicas: 23 
+  replicas: 2 
   template:
     metadata:
       labels:
