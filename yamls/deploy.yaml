@@ -43,7 +43,10 @@ spec:
   rules:
   - http:
       paths:
-      - backend:
-          serviceName: pipeline-service 
-          servicePort: 8080 
-        path: /
+      - path: /app1
+        pathType: Prefix
+        backend:
+          service: 
+            name: pipeline-service 
+            port: 
+              number: 8080 
