@@ -42,10 +42,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: "apps.my-azure.online"
+  - host: "10.18.56.176"
     http:
       paths:
-      - path: /app1
+      - path: /
         pathType: Prefix
         backend:
           service: 
