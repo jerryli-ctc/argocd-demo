@@ -42,8 +42,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: "10.18.56.176"
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
